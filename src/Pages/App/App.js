@@ -1,24 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import "../../../global.css";
+import Home from "../Home/Home.jsx";
+import { NavigationContainer } from "@react-navigation/native";
+import { TabNavigation } from "../../Components/navigation/TabNavigation.jsx";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text className="text-3xl text-white">Recetas por Categoria</Text>
-      <View>
-        <Text className="text-red-500">Vamos Funciona</Text>
-      </View>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <TabNavigation />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
