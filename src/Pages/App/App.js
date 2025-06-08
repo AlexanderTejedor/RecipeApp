@@ -1,14 +1,14 @@
-import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
 import "../../../global.css";
-import Home from "../Home/Home.jsx";
 import { NavigationContainer } from "@react-navigation/native";
 import { TabNavigation } from "../../Components/navigation/TabNavigation.jsx";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <TabNavigation />
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer className="flex-1 justify-center items-center">
+        <TabNavigation />
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
