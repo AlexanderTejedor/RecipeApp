@@ -9,7 +9,7 @@ const RecipeCard = ({ title, image, descrip, category }) => {
       />
       <View className="p-4 gap-1">
         <Text className="text-xl font-semibold">{title}</Text>
-        <Text>{descrip}</Text>
+        <Text>{descrip.slice(0, 50)}...</Text>
         <Text className="text-blue-600">{category}</Text>
       </View>
     </View>

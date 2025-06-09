@@ -1,7 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../../Pages/Home/Home";
+import { HomeStack } from "./HomeStack";
 import RecipePage from "../../Pages/RecipesPage/RecipePage";
-import "../../../global.css";
 import Foundation from "@expo/vector-icons/Foundation";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
@@ -11,13 +10,14 @@ const TabNavigation = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Home"
-        component={Home}
+        name="HomeTab"
+        component={HomeStack}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
             <Foundation name="home" size={size} color={color} />
           ),
+          title: "Inicio",
         }}
       />
       <Tab.Screen
@@ -28,6 +28,7 @@ const TabNavigation = () => {
           tabBarIcon: ({ color, size }) => (
             <AntDesign name="book" size={size} color={color} />
           ),
+          title: "Recetas",
         }}
       />
     </Tab.Navigator>
